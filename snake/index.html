@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="zippinglibrary.js"></script>
+    <script src="texts.js" defer></script>
+    <script src="compression.js" defer></script>
+    <script src="snake.js" defer></script>
+    <script src="weapons.js"></script>
+    <script src="BonusStagesMaps.js" defer></script>
+    <script src="bonustages.js" defer></script>
+    <script src="customStagesNonBonus.js" defer></script>
+    <script src="levels.js" defer></script>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    
+    <title>Snake</title>
+    
+</head>
+
+<body>
+    <table></table>
+
+    <p class="score points">0</p>
+
+    <p class="life" id ="life"></p>   
+    <img class = "gun" id = "gun" src=""></div>
+    <p class="emmo" id ="emmo"></p>    
+    <div class="pause secret" id="pause"><img src="pause.png"></div>
+    <div class="back secret" id="back" title="back to regular snake"><img src="back.png"></div>
+
+
+    <p id="scoreText" class="high-score secret">High Score: <span class="text"></span></p>
+<!-- 
+    <div class="advanced-switch">
+       <p class="content">
+            <span class="desc">Adavanced Mode:</span> <span class="text">On</span>
+        </p>
+    </div> -->
+
+    <form class="alerto" method="dialog">
+        <div class="btn-wrapper">
+            <h3 class="msg">you lost, sucker</h3>
+            <button type="submit">
+                <div class="fatut">&times;</div>
+            </button>
+        </div>
+        <p class="also-msg"></p>
+    </form>
+</body>
+
+
+</html>

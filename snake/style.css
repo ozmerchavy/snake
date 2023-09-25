@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+:root { 
+    font-size: .75rem;
+}
+*{
+touch-action: manipulation;
+font-family: "Arial Unicode MS", Arial, sans-serif;
+
+
+}
+td {
+
+    font-size: calc(var(--size)*1px);
+    text-align: center;
+    box-sizing: border-box;
+    background-color: var(--bgColorTable);
+    border: 4px solid var(--bgColor); 
+    box-shadow: 2px 2px 10px -5px white;
+    border-radius: 7px;
+    overflow: hidden;
+
+}
+td img {
+        max-width:calc(var(--size)*1px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      
+}
+td:has(img){
+    position: relative;
+    border: 0.3px solid white;
+  
+}
+
+[apple-device] td {
+    padding-inline: calc(calc(var(--size) / 6.667) * 1px);
+
+
+}
+
+
+table {
+    padding: 16px;
+    --rotation: 0;
+    --transY: 0;
+    --transX: 0;
+    transform: rotate(calc(var(--rotation) * 1deg)) translateY(calc(var(--transY) * 1.72px)) translateX(calc(var(--transX) * 1.72px));
+    transition: transform calc(3.5s / var(--fps)) ease-out;
+    table-layout: fixed;
+    
+}
+
+
+table .⬛ {
+    color: transparent;
+    
+}
+table .⬜️ {
+    color: transparent;
+    background-color: var(--bgColor);
+}
+
+
+table .❤️, .🔑 {
+    border: 0.2px solid white;
+  }
+
+table .🪗 {
+    color: transparent;
+
+    background-image: url("extra-media/accordy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+  table .⬤ {
+    /* color: transparent; */
+    background-image: url("extra-media/bullet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  table .💣{
+    background-color: rgba(255, 196, 196, 0.5);
+  }
+
+
+  table .🦆{
+    color: transparent;
+    background-image: url("extra-media/duckbomb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  table .☁️{
+    border: 0.2px solid rgb(196, 0, 173);
+
+  }
+
+
+
+body {
+    --size: 30;
+    --fps: 5;
+    --bgColor: black;
+    --bgColorTable: "";
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgColor);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height:100%; 
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.alerto:not([open]) {
+    display: none;
+}
+
+.alerto {
+    padding: 30px;
+    box-shadow: 2px 2px 10px -5px gray;
+    position: absolute;
+    font-size: 2rem;
+    max-width: 70ch;
+    border-radius: 0.5em;
+    z-index: 2;
+    background-color: white;
+}
+
+.alerto .btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alerto button{
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 10px -5px black;
+    background-color: rgb(243, 130, 130);
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 2ch;
+
+    transition: transform 200ms ease-out;
+}
+
+.alerto button:hover {
+    transform: scale(1.07) translateY(1px);
+}
+
+.alerto .also-msg {
+    margin-top: .836rem;
+    max-width: 55ch;
+}
+
+.points {
+    position: absolute;
+    font-size: 6rem;;
+    left: 3rem;
+    margin: 0;
+    color: #ddf;
+    padding: 0;
+}
+
+
+.pause {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: scale(20%) translate(100%, -180%);
+    margin: 0;
+    padding: 0;
+}
+
+
+.back {
+    transform: scale(2%);
+    position: absolute;
+    top: -35rem;
+    right: -36rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+}
+
+.back:hover{
+    transform: scale(3%);
+    cursor: pointer;
+
+
+}
+
+.score { 
+    top: 1rem;
+    
+}
+
+.life { 
+    top: 10rem;
+    position: absolute;
+    font-size: 2rem;;
+    left: 3rem;
+    margin: 0;
+    color: #ddf;
+    padding: 0;
+    writing-mode: vertical-rl;
+
+}
+
+
+.gun { 
+    top: 5rem;
+    position: absolute;
+    font-size: 2rem;;
+    right: 2rem;
+    margin: 0;
+    color: #ddf;
+    padding: 0;
+    width: 6rem;
+
+}
+
+
+.emmo { 
+    top: 12rem;
+    position: absolute;
+    font-size: 2rem;;
+    right: 2.5rem;
+    margin: 0;
+    color: #ddf;
+    padding: 0;
+    writing-mode: vertical-rl;
+    max-height: 75%;
+
+}
+
+.high-score {
+    position: absolute;
+    font-size: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    padding: 0;
+}
+
+@media (max-width:900px){
+    
+.high-score {
+    font-size: 3.5rem;
+    bottom: -20px;
+}
+
+}
+
+
+.secret {
+    display: none;
+}
+
+
+.alerto, .points {
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.6em;
+}
